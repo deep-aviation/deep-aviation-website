@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Aviation</title>
+    <style>
+        /* Core Styling */
+        :root {
+            --primary-color: #0869ad; /* Blue Logo Color */
+            --bg-color: #ffffff;      /* White Background */
+            --text-color: #333333;
+            --light-gray: #f8f9fa;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: var(--bg-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+        .nav-links a {
+            margin-left: 25px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 50px;
+            text-align: center;
+        }
+        section:nth-child(even) {
+            background-color: var(--light-gray);
+        }
+        h2 {
+            color: var(--primary-color);
+            font-size: 36px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+        p {
+            font-size: 16px;
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+        }
+
+        /* Hero Section */
+        #home {
+            padding: 120px 50px;
+        }
+        #home h1 {
+            font-size: 48px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        /* Services Grid */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .card {
+            background: var(--bg-color);
+            border: 1px solid #eaeaea;
+            padding: 30px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.04);
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        /* Video Showcase */
+        .video-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        .video-wrapper {
+            width: 100%;
+            max-width: 500px;
+            background-color: #000;
+            border-radius: 8px;
+            overflow: hidden;
+            aspect-ratio: 16 / 9;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#home" class="logo">Deep Aviation</a>
+        <div class="nav-links">
+            <a href="#about">About Us</a>
+            <a href="#services">Our Services</a>
+            <a href="#videos">Videos</a>
+            <a href="#team">Our Team</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section id="home">
+        <h1>Welcome to Deep Aviation</h1>
+        <p>Providing precision engineering, manufacturing, and operational excellence for the aerospace sector.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Deep Aviation is dedicated to pushing the boundaries of aerospace engineering. We pride ourselves on maintaining rigorous standards of quality and ensuring seamless operational integration to support complex manufacturing demands.</p>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>Design</h3>
+                <p>Our advanced facility is equipped with modern precision machinery and staffed by experienced professionals. Our skilled team uses the latest CAD, CAM, and CAE tools to meet complex design and manufacturing needs with precision and efficiency.</p>
+            </div>
+            <div class="card">
+                <h3>MTJ 900</h3>
+                <p>Manufacturing and comprehensive operational support for the MTJ 900 series.</p>
+            </div>
+            <div class="card">
+                <h3>MTJ 1200</h3>
+                <p>Precision engineering and reliable production services for the MTJ 1200.</p>
+            </div>
+            <div class="card">
+                <h3>Pistons</h3>
+                <p>High-quality, durable piston manufacturing tailored to rigorous aerospace specifications.</p>
+            </div>
+            <div class="card">
+                <h3>Shafts</h3>
+                <p>Engineered coupling shafts designed to withstand extreme operational conditions.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="videos">
+        <h2>Showcase Gallery</h2>
+        <p>Explore our operational capabilities, precision machinery, and facility highlights.</p>
+        <div class="video-container">
+            <div class="video-wrapper">
+                <video controls preload="metadata">
+                    <source src="video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-wrapper">
+                <video controls preload="metadata">
+                    <source src="video2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <section id="team">
+        <h2>Our Team</h2>
+        <p>Led by our Manager Operations, our team oversees critical administrative and operational functions supporting aerospace manufacturing, ensuring every project is executed with unmatched skill and accuracy.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>We are here to help you with any inquiries regarding our services or solutions.</p>
+        <p><strong>Email:</strong> <a href="mailto:info@deep-aviation.com" style="color: var(--primary-color); font-weight: bold; text-decoration: none;">info@deep-aviation.com</a></p>
+        <p><strong>Phone:</strong> +91 (Insert Number)</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Deep Aviation Private Limited. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
